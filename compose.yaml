@@ -1,0 +1,9 @@
+services:
+  NTK.UpTime.Monitoring:
+    image: mohamadkaravi/NTK.UpTime.Monitoring:2
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    ports:
+      # <Host Port>:<Container Port>
+      - "3001:3001"
